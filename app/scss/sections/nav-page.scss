@@ -1,0 +1,112 @@
+.pages {
+    background: #fff;
+    border-radius: 5px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+    @include media($size3) {
+        min-height: 50px;
+    }
+    @include media($size5) {
+        min-height: 30px;
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding-top: 18px;
+        }
+    }
+    &__item {
+        text-align: center;
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include media($size3) {
+            height: 30px;
+            width: 30px;
+        }
+        @include media($size5) {
+            height: 18px;
+            width: 18px;
+        }
+    }
+    &__link {
+        position: relative;
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: $darkB;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 50%;
+        transition: all .3s;
+        &:hover {
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.2);
+        }
+        &:active {
+            color: #b9bed1;
+        }
+        @include media($size3) {
+            padding: 0;
+        }
+    }
+    &__number {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__prev,
+    &__next {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        height: 16px;
+        width: 16px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    &__prev {
+        left: 8%;
+        background: url(../img/icons/prev-icon.png) no-repeat center;
+        border-right: 1px solid $bg;
+        height: 100%;
+        padding-right: 25%;
+        @include media($size3) {
+            padding-right: 10%;
+            left: 4%;
+        }
+    }
+    &__next {
+        right: -18%;
+        background: url(../img/icons/next-icon.png) no-repeat center;
+        border-left: 1px solid $bg;
+        height: 100%;
+        padding-right: 25%;
+        @include media($size3) {
+            padding-right: 10%;
+            right: -6%;
+        }
+    }
+}
+
+.active__page {
+    background: #fff;
+    color: #b9bed1;
+    border-radius: 50%;
+    box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.2);
+}

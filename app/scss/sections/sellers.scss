@@ -1,0 +1,107 @@
+.sellers {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    &__title {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 500;
+        padding: 20px 0;
+        background: #fff;
+        text-align: center;
+        border-bottom: 1px solid $bg;
+        width: 100%;
+        margin: 0 auto;
+        @include media($size1) {
+            max-width: 878px;
+        }
+        @include media($size2) {
+            max-width: 585px;
+        }
+        @include media($size4) {
+            max-width: 293px;
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: #fff;
+        min-height: 340px;
+        min-width: 292.5px;
+        text-align: center;
+        border-right: 1px solid $bg;
+        &:nth-child(2) {
+            @include media($size1) {
+                border-bottom: 1px solid $bg;
+            }
+        }
+        &:nth-child(1) {
+            @include media($size2) {
+                border-bottom: 1px solid $bg;
+            }
+        }
+        &:nth-child(3) {
+            @include media($size3) {
+                border-bottom: 1px solid $bg;
+            }
+        }
+        &:nth-child(4) {
+            @include media($size1) {
+                border-right: none;
+            }
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+    &__pic {
+        margin-top: -62px;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__desc {
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__name {
+        font-size: 16px;
+        font-weight: 500;
+        color: $darkB;
+        padding-bottom: 12px;
+        width: 270px;
+    }
+    &__color {
+        font-size: 11px;
+        font-weight: 500;
+        color: #a1a8bd;
+        text-transform: uppercase;
+        padding-bottom: 24px;
+    }
+    &__before {
+        text-decoration: line-through;
+        color: #a1a8bd;
+        padding-right: 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &__after {
+        font-size: 14px;
+        font-weight: 500;
+        color: $darkB;
+    }
+}

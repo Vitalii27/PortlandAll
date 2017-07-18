@@ -1,0 +1,75 @@
+.reviews {
+    background: #fff;
+    &__header {
+        text-align: center;
+        padding-top: 70px;
+    }
+    &__title {
+        margin-bottom: 15px;
+        font-size: 32px;
+        font-weight: 900;
+        color: #222328;
+    }
+    &__text {
+        font-family: "Crimson Text";
+        font-style: italic;
+        font-size: 16px;
+        color: #b9bed1;
+    }
+    &__list {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 960px;
+        padding-top: 55px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-right: 65px;
+        @include media($size3) {
+            padding: 0;
+            margin: 0 auto;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__img {
+        display: block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    &__about {
+        text-align: left;
+        padding-left: 20px;
+    }
+    &__name {
+        font-size: 14px;
+        font-weight: 500;
+        color: #3a405b;
+    }
+    &__post {
+        font-family: "Crimson Text";
+        font-size: 14px;
+        font-weight: 500;
+        font-style: italic;
+        color: #b9bed1;
+    }
+    &__opinion {
+        font-size: 16px;
+        font-family: "Crimson Text";
+        font-weight: 500;
+        color: #3a405b;
+        padding-top: 25px;
+        width: 255px;
+        padding-bottom: 90px;
+    }
+}

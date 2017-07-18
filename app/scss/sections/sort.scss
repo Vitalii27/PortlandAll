@@ -1,0 +1,231 @@
+.content-sort {
+    width: 100%;
+    min-height: 56px;
+    border-radius: 5px;
+    background: #fff;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    @include media($size1) {
+        justify-content: center;
+    }
+    @include media ($size3) {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 70px;
+    }
+}
+
+.row1 {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid $bg;
+    min-height: 56px;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        padding-top: 21px;
+    }
+    @include media ($size1) {
+        order: 1;
+        border-bottom: 1px solid $bg;
+        width: 50%;
+        justify-content: center;
+    }
+    @include media ($size3) {
+        border-right: none;
+        width: 100%;
+    }
+    &__sort {
+        padding: 0 50px 0 20px;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #a1a7bd;
+    }
+    &__best {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 500;
+        cursor: pointer;
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            background: url(../img/icons/Open-Icon.png) no-repeat right center;
+            width: 10px;
+            height: 6px;
+            margin-left: 9px;
+            margin-right: 20px;
+        }
+    }
+}
+
+.header-menu__sort {
+    display: none;
+    @include media($size1) {
+        display: block;
+        top: 99%;
+        padding-top: 15px;
+    }
+    @include media($size3) {
+        left: 21%;
+        top: 91%;
+    }
+    @include media($size4) {
+        left: 10%;
+    }
+    @include media($size7) {
+        left: 17%;
+    }
+}
+
+.row2 {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    border-right: 1px solid $bg;
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        padding-top: 12px;
+    }
+    @include media ($size1) {
+        border-right: none;
+        order: 3;
+    }
+}
+
+.sort-form {
+    position: relative;
+    &__label {
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #a1a7bd;
+        padding: 0 12px 0 30px;
+        cursor: pointer;
+        &_dash {
+            padding: 0 3px;
+            @include media ($size3) {
+                display: none !important;
+            }
+        }
+        @include media ($size3) {
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 10px;
+        }
+    }
+    &__input {
+        background: #f0f2f7;
+        border: 1px solid #e3e8f0;
+        border-radius: 20px;
+        outline: none;
+        max-width: 163px;
+        padding: 7px 0 7px 14px;
+        @include placeholder {
+            color: #b9bfd3;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        @include media ($size3) {
+            max-width: 250px;
+        }
+        &_price {
+            max-width: 65px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        @include media ($size3) {
+            max-width: 175px;
+            margin: 5px 0 5px 30px;
+        }
+    }
+}
+
+.sort-form__label_check {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    @include media($size3) {
+        position: absolute;
+        top: 141px;
+        left: 5px;
+    }
+    @include media($size4) {
+        left: 5px;
+        top: 145px;
+    }
+    @include media($size5) {
+        left: 5px;
+        top: 181px;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            top: 140px;
+        }
+    }
+}
+
+.checkbox__fake_sort-form {
+    background: $green;
+    border: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    margin-left: 30px;
+}
+
+.checkbox__name_sort-form {
+    padding-right: 40px;
+    vertical-align: baseline !important;
+}
+
+.row3 {
+    display: flex;
+    align-items: center;
+    @include media ($size1) {
+        order: 2;
+        border-bottom: 1px solid $bg;
+        width: 50%;
+        padding: 20px 0;
+        justify-content: center;
+    }
+    @include media ($size3) {
+        width: 100%;
+    }
+    &__ship-to {
+        padding: 0 50px 0 20px;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #a1a7bd;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding: 5px 48px 0 17px;
+        }
+    }
+    &__country {
+        align-self: flex-end;
+        padding-left: 45px;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 500;
+        color: $darkB;
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            padding-top: 6px;
+        }
+        cursor: pointer;
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            background: url(../img/icons/Open-Icon.png) no-repeat right center;
+            width: 10px;
+            height: 6px;
+            margin-left: 9px;
+            margin-right: 20px;
+        }
+    }
+}

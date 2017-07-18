@@ -1,0 +1,68 @@
+.footer {
+    background: #222328;
+    overflow: hidden;
+    @include media($size4) {
+        padding: 0 15px;
+    }
+    &__contacts {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 55px 0;
+        border-bottom: 1px solid #2d2e33;
+    }
+    &__nav {
+        max-width: 390px;
+        white-space: nowrap;
+    }
+    &__link {
+        color: #fff;
+        padding-right: 25px;
+        transition: color .2s;
+        font-size: 15px;
+        &:last-child {
+            padding-right: 0;
+        }
+        &_tw:hover {
+            color: #1da1f2;
+        }
+        &_fb:hover {
+            color: #3b5998;
+        }
+        &_g:hover {
+            color: #db4437;
+        }
+    }
+    &__text {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        padding: 55px 0;
+    }
+    &__left {
+        font-size: 14px;
+        font-family: "Crimson Text";
+        font-weight: 500;
+        font-style: italic;
+        max-width: 500px;
+        color: #606165;
+    }
+    &__right {
+        display: flex;
+        color: #606165;
+        font-size: 11px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    &__contact1 {
+        padding-right: 20px;
+    }
+}
+
+.nav__link__footer {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+}

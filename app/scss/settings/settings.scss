@@ -1,0 +1,100 @@
+/*-----------------------------------
+colors
+-----------------------------------*/
+
+$bg: #e4e5e7;
+$green: #00e2aa;
+$darkB: #343e5c;
+// mixin responsive
+@mixin media($size) {
+    @media (max-width: $size) {
+        @content;
+    }
+}
+
+// responsive variables
+$size1: 1200px;
+$size2: 940px;
+$size3: 768px;
+$size4: 660px;
+$size5: 480px;
+$size6: 384px;
+$size7: 320px;
+
+/*-----------------------------------
+adjustment
+-----------------------------------*/
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 1.42;
+    background: $bg;
+    color: $darkB;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.maincontent {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    @include media ($size1) {
+        margin: 0 30px;
+    }
+    @include media ($size3) {
+        margin: 0;
+    }
+}
+
+section {
+    position: relative;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    &:focus {
+        outline: none;
+    }
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: normal;
+}
